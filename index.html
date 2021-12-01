@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern music player</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="main">
+
+        
+
+        <div class="playing_part">
+            <div class="img">
+                <img src="https://www.latercera.com/resizer/drnbhdA9DIRYhPjrQcAenWbbCbQ=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/SXH23D65DZC5TJ4TP6MGA7CEMY.jpg" alt="img">
+            </div>
+        </div>
+        
+        <!--control part-->
+        <div class="control_part">
+            <div class="song_title">
+                <p>I Follow Rivers </p>
+                <p>Lykke Li</p>
+            </div>
+
+            <div class="control_buttons">
+                <div class="range_slider">
+                    <input type="range" min="0" max="100" id="slider" value="0">
+                    <p>4:00</p>
+                </div>
+
+                <div class="main_btns">
+                    <button id="previous"><i class='bx bx-skip-previous'></i></button>
+                    <button id="play_btn"><i class='bx bx-play'></i></button>
+                    <button id="previous"><i class='bx bx-skip-next' ></i></button>
+                </div>
+            </div>
+        </div>
+
+        
+    <audio src="audio/Lykke.mp3" id="audio"></audio>
+    <!--javascript part-->
+    
+    <script>
+      let audio=document.getElementById("audio")
+      let btn=document.getElementById("play_btn");
+      let playing=false
+      btn.addEventListener("click",()=>{
+         if(playing){
+             audio.pause()
+             playing=false
+         }
+         else{
+             audio.play()
+             playing=true
+
+         }
+      })
+    </script>
+</body>
+</html>
